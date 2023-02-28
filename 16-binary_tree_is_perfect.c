@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 // Calculate the depth
-int depth(binary_tree_t *node) 
+int depth(const binary_tree_t *node) 
 {
     int d = 0;
     while (node != NULL) 
@@ -14,7 +14,7 @@ int depth(binary_tree_t *node)
 }
 
 // Check if the tree is perfect
-bool is_perfect(binary_tree_t *root, int d, int level) 
+bool is_perfect(const binary_tree_t *root, int d, int level) 
 {
     // Check if the tree is empty
   if (root == NULL)
