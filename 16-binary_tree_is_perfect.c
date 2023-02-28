@@ -1,7 +1,13 @@
 #include "binary_trees.h"
 #include <stdbool.h>
 
-// Calculate the depth
+/**
+ * depth - Returns the depth of a given
+ *         node in a binary tree.
+ * @node: A pointer to the node to measure the depth of.
+ *
+ * Return: The depth of node.
+ */
 int depth(const binary_tree_t *node) 
 {
     int d = 0;
@@ -13,7 +19,14 @@ int depth(const binary_tree_t *node)
     return d;
 }
 
-// Check if the tree is perfect
+/**
+ * is_perfect - Checks if a binary tree is perfect recursively.
+ * @root: A pointer to the root node of the tree to check.
+ * @d: The depth of one leaf in the binary tree.
+ * @level: Level of current node.
+ *
+ * Return: If the tree is perfect, 1, otherwise 0.
+ */
 bool is_perfect(const binary_tree_t *root, int d, int level) 
 {
     // Check if the tree is empty
